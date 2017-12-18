@@ -11,13 +11,6 @@ branches:
   
 jobs:
   include:
-    - stage: MOM-Backend-Flowz
-      script:
-      - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-      - docker build -t mom_backend_flowz:"$DOCKER_IMAGE_TAG" ./server/
-      - docker images
-      - docker tag mom_backend_flowz:"$DOCKER_IMAGE_TAG" $DOCKER_USERNAME/mom_backend_flowz:"$DOCKER_IMAGE_TAG"
-      - docker push $DOCKER_USERNAME/mom_backend_flowz:"$DOCKER_IMAGE_TAG"
     - stage: Mom-Frontend-Flowz
       script:
       - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
