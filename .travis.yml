@@ -7,17 +7,17 @@ services:
 
 branches:
   only:
-  - demo
+  - master
   
 jobs:
   include:
     - stage: Mom-Frontend-Flowz
       script:
       - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-      - docker build -t mom_frontend_flowz:demo --build-arg accesskey="$AWS_ACCESSKEY" --build-arg secretkey="AWS_SECRETKEY" ./client/
+      - docker build -t mom_frontend_flowz:dev --build-arg accesskey="$AWS_ACCESSKEY" --build-arg secretkey="AWS_SECRETKEY" ./client/
       - docker images
-      - docker tag mom_frontend_flowz:demo $DOCKER_USERNAME/mom_frontend_flowz:demo
-      - docker push $DOCKER_USERNAME/mom_frontend_flowz:demo
+      - docker tag mom_frontend_flowz:dev $DOCKER_USERNAME/mom_frontend_flowz:dev
+      - docker push $DOCKER_USERNAME/mom_frontend_flowz:dev
 
     
 
