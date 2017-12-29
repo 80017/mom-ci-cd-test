@@ -18,9 +18,12 @@ echo "call upgrade.sh file"
 
 
 
-if [ "$TRAVIS_BRANCH" = "master" ]
+if [ "$TRAVIS_BRANCH" = "demo" ]
 then
     echo "master branch"
 else
-    echo "Not Cool Beans"
+    { 
+       echo "Not Cool Beans"
+       echo "master branch"
+    }   
 fi
