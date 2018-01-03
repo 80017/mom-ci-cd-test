@@ -7,3 +7,13 @@
 # 'http://rancher.flowz.com:8080/v2-beta/projects/1a29/services/1s302?action=upgrade'
 
 echo "call upgrade_demo.sh file"
+
+if [ "$TRAVIS_BRANCH" = "demo" ]
+then
+    echo "master branch"
+else
+    { 
+       echo "Not Cool Beans"
+       echo "master branch"
+    }   
+fi
