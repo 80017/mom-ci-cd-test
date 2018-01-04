@@ -27,7 +27,8 @@ else
        echo "Not Cool Beans"
        echo "master branch"
        TAG="latest";
+       DOCKER_IMAGE="$DOCKER_IMAGE_TAG";
     }   
 fi
-echo "outer loop $TAG"
+echo "outer loop $DOCKER_IMAGE"
 echo $TAG
