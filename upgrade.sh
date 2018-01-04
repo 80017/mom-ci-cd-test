@@ -21,11 +21,12 @@ echo "call upgrade.sh file"
 if [ "$TRAVIS_BRANCH" = "demo" ]
 then
     echo "master branch"
-    TAG="latest";
+    TAG="demo";
 else
     { 
        echo "Not Cool Beans"
        echo "master branch"
+       TAG="latest";
     }   
 fi
 echo "outer loop $TAG"
