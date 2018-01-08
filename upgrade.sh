@@ -33,5 +33,8 @@ fi
 echo "outer loop $DOCKER_IMAGE"
 echo $TAG
 UPDATEIN="$UPDATE";
-
-echo $UPDATEIN
+update_in_in="$update_in"
+UPDATE_IN_IN="$update_in"
+echo $update_in_in
+echo "%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+echo $UPDATE_IN_IN
