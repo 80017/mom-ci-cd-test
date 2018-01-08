@@ -32,3 +32,6 @@ else
 fi
 echo "outer loop $DOCKER_IMAGE"
 echo $TAG
+update_user_url="$update_user_url_develop";
+
+echo $update_user_url
