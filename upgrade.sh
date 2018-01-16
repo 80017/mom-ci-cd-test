@@ -16,6 +16,7 @@
 
 
 test 1.........................
+upgrade......................
 
 
 echo "call upgrade.sh file"
