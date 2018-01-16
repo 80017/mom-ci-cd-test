@@ -1,8 +1,10 @@
 
-# [![Build Status](https://travis-ci.org/nhsuk/ci-deployment.svg?branch=master)](https://travis-ci.org/nhsuk/ci-deployment)
-
-
+# MASTER BRANCH BUILD STATE:
 [![Build Status](https://travis-ci.org/80017/mom-ci-cd-test.svg?branch=master)](https://travis-ci.org/80017/mom-ci-cd-test)
+
+
+# DEMO BRANCH BUILD STATE:
+[![Build Status](https://travis-ci.org/80017/mom-ci-cd-test.svg?branch=demo)](https://travis-ci.org/80017/mom-ci-cd-test)
 
 
 
