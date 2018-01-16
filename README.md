@@ -1,3 +1,11 @@
+
+# [![Build Status](https://travis-ci.org/nhsuk/ci-deployment.svg?branch=master)](https://travis-ci.org/nhsuk/ci-deployment)
+
+
+[![Build Status](https://travis-ci.org/80017/mom-ci-cd-test.svg?branch=master)](https://travis-ci.org/80017/mom-ci-cd-test)
+
+
+
 # MOM
 
 
