@@ -9,5 +9,6 @@
 echo "call finish.sh file"
 echo $TRAVIS_BUILD_NUMBER
 
-
-
+echo "TRAVIS_PULL_REQUEST is $TRAVIS_PULL_REQUEST"
+echo "TRAVIS_TAG is $TRAVIS_TAG"
+echo "TRAVIS_BUILD_NUMBER is $TRAVIS_BUILD_NUMBER"
