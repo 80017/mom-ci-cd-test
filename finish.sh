@@ -24,8 +24,9 @@ if [ "$TRAVIS_BRANCH" = "develop" ]; then
       echo -e "Starting to tag commit.\n"
 
       # git config --global credential.helper 'cache --timeout=3600'
-      git config --global user.name "travis-ci.org"
-      git config --global user.email "80017"
+      git config --global user.email "travis-ci.org"
+      git config --global user.name "80017"
+
 
 
       # Add tag and push to master.
