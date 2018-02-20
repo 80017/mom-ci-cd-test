@@ -34,6 +34,7 @@ if [ "$TRAVIS_BRANCH" = "develop" ]; then
       # git config --global credential.helper 'cache --timeout=3600'
       git config --global user.email "arpitap@officebeacon.com"
       git config --global user.name "80017"
+      git config --global github.token a294861d35198831d44b5da4769301cb68811c67
 
 
 
