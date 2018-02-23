@@ -23,10 +23,13 @@ jobs:
             docker push $DOCKER_USERNAME_FLOWZ/mom_backend_flowz:latest;
         elif [ ${TRAVIS_BRANCH} = "develop" ]; then
             docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-            docker build -t mom_backend_flowz:$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER ./server/;
+            docker build -t mom_backend_flowz:$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER ./server/;
             docker images;
-            docker tag mom_backend_flowz:$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER;
-            docker push $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER;
+            docker tag mom_backend_flowz:$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER;
+            docker tag mom_backend_flowz:$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER $DOCKER_USERNAME/mom_backend_flowz:dev;
+            docker images;
+            docker push $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BRANCH-$TRAVIS_BUILD_NUMBER;
+            docker push $DOCKER_USERNAME/mom_backend_flowz:dev;
         else
             docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
             docker build -t mom_backend_flowz:qa ./server/;
