@@ -13,27 +13,27 @@ branches:
 
 jobs:
   include:
-     - stage: MOM-Backend-Flowz
-       script:
-       - 'if [ ${TRAVIS_BRANCH} = "master" ]; then
-             docker login -u="$DOCKER_USERNAME_FLOWZ" -p="$DOCKER_PASSWORD_FLOWZ";
-             docker build -t mom_backend_flowz:latest ./server/;
-             docker images;
-             docker tag mom_backend_flowz:latest $DOCKER_USERNAME_FLOWZ/mom_backend_flowz:latest;
-             docker push $DOCKER_USERNAME_FLOWZ/mom_backend_flowz:latest;
-         elif [ ${TRAVIS_BRANCH} = "develop" ]; then
-             docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-             docker build -t mom_backend_flowz:$TRAVIS_BUILD_NUMBER ./server/;
-             docker images;
-             docker tag mom_backend_flowz:$TRAVIS_BUILD_NUMBER $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BUILD_NUMBER;
-             docker push $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BUILD_NUMBER;
-         else
-             docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-             docker build -t mom_backend_flowz:qa ./server/;
-             docker images;
-             docker tag mom_backend_flowz:qa $DOCKER_USERNAME/mom_backend_flowz:qa;
-             docker push $DOCKER_USERNAME/mom_backend_flowz:qa;
-         fi'
+    # - stage: MOM-Backend-Flowz
+    #   script:
+    #   - 'if [ ${TRAVIS_BRANCH} = "master" ]; then
+    #         docker login -u="$DOCKER_USERNAME_FLOWZ" -p="$DOCKER_PASSWORD_FLOWZ";
+    #         docker build -t mom_backend_flowz:latest ./server/;
+    #         docker images;
+    #         docker tag mom_backend_flowz:latest $DOCKER_USERNAME_FLOWZ/mom_backend_flowz:latest;
+    #         docker push $DOCKER_USERNAME_FLOWZ/mom_backend_flowz:latest;
+    #     elif [ ${TRAVIS_BRANCH} = "develop" ]; then
+    #         docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    #         docker build -t mom_backend_flowz:$TRAVIS_BUILD_NUMBER ./server/;
+    #         docker images;
+    #         docker tag mom_backend_flowz:$TRAVIS_BUILD_NUMBER $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BUILD_NUMBER;
+    #         docker push $DOCKER_USERNAME/mom_backend_flowz:$TRAVIS_BUILD_NUMBER;
+    #     else
+    #         docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    #         docker build -t mom_backend_flowz:qa ./server/;
+    #         docker images;
+    #         docker tag mom_backend_flowz:qa $DOCKER_USERNAME/mom_backend_flowz:qa;
+    #         docker push $DOCKER_USERNAME/mom_backend_flowz:qa;
+    #     fi'
     # - stage: MOM-Frontend-Flowz
     #   script:
     #   - 'if [ ${TRAVIS_BRANCH} = "master" ]; then
