@@ -11,10 +11,6 @@ branches:
   - develop
   - QA
 
-tag:
-  only:
-    -v3  
-
 jobs:
   include:
      - stage: MOM-Backend-Flowz
